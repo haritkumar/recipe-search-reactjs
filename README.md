@@ -1,5 +1,6 @@
 ## Recipe Search ReactJs App
 ![alt text](http://res.cloudinary.com/haritkumar/image/upload/v1534689777/github/recipe.png)
+### Instructions
 ```sh
 git clone https://github.com/haritkumar/recipe-search-reactjs.git
 cd recipe-search-reactjs/
