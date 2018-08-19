@@ -27,21 +27,31 @@ class RecipeItem extends Component{
                         <div className="caption card-body">
                             <h4 className="group card-title inner list-group-item-heading">
                                 {recipe.title} 
-                                    {this.state.favorited?
+                                {
+                                    this.props.favoriteButton ?
+                                        this.state.favorited ?
                                         <i className="fa fa-star"></i>
-                                    :
+                                        :
                                         <i className="fa fa-star-o"></i>
+                                 :
+                                 <i className="fa fa-star"></i>
                                 }
+                                    
                                 </h4>
                             <p className="group inner list-group-item-text">
                                 {recipe.ingredients}</p>
                             <div className="row">
-                            {this.state.favorited?
-                            <div></div>
-                            :
-                            <div className="col-xs-12 col-md-6">
-                                <button onClick={() => this.favorite(recipe)} className="btn btn-primary">ADD TO FAVORITE</button>
-                            </div>
+                            {
+                                this.props.favoriteButton ?
+                                    this.state.favorited?
+                                    <div></div>
+                                    :
+                                    <div className="col-xs-12 col-md-6">
+                                        <button onClick={() => this.favorite(recipe)} className="btn btn-primary">ADD TO FAVORITE</button>
+                                    </div>
+                                :
+                                <div></div>   
+                            
                             }
                                 <div className="col-xs-12 col-md-6">
                                     <a target="blank" className="btn btn-success" href={recipe.href}>Go to Dish</a>
