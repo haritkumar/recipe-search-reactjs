@@ -16,6 +16,12 @@ serve -s build [You may serve it with a static server]
 
 ### Docker Image
 ```sh
+FROM httpd:2.4
+LABEL maintainer="haritkumar@hotmail.com"
+COPY ./build/ /usr/local/apache2/htdocs/
+```
+
+```sh
 docker build -t my-apache2 .
 docker run -dit --name my-running-app -p 8080:80 my-apache2
 ```
