@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import RecipeItem from './RecipeItem';
 import '../styles/listitem.css';
 import $ from 'jquery';
+import {Link} from 'react-router-dom';
 
 class RecipeList extends Component{
     listView(event){
@@ -19,6 +20,12 @@ class RecipeList extends Component{
         console.log("this.props",this.props);
         return(
             <div className="container">
+                {
+                    this.props.favoriteRecipe.length > 0 ?
+                    <h4><Link to='/favorites'>Favorites</Link></h4>
+                    : <div></div>
+                }
+                
                 <div className="row">
                     <div className="col-lg-12 my-3">
                         <div>
