@@ -7,6 +7,9 @@ cd recipe-search-reactjs/
 npm install redux react-redux bootstrap reactstrap jquery font-awesome react-router-dom --save
 npm start
 ```
+- Install Allow-Control-Allow-Origin: * plugin in chrome to run 
+- https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
+  
 ### Run Build
 ```sh
 npm run-script build
