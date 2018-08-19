@@ -21,7 +21,7 @@ class RecipeList extends Component{
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 my-3">
-                        <div className="pull-right">
+                        <div>
                             <div className="btn-group">
                                 <button className="btn btn-info" id="list" onClick={this.listView}>
                                     List View
