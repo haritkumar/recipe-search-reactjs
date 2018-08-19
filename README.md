@@ -13,6 +13,14 @@ npm run-script build
 npm install -g serve
 serve -s build [You may serve it with a static server]
 ```
+
+### Docker Image
+```sh
+docker build -t my-apache2 .
+docker run -dit --name my-running-app -p 8080:80 my-apache2
+```
+- Access here http://localhost:8080/
+  
 ### Font Awesome Icons
 - https://fontawesome.com/v4.7.0/icons/
 - https://reactstrap.github.io/
